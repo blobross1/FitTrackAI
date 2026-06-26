@@ -1,0 +1,3 @@
+No login required. All features are available immediately after launch.
+
+If your app requires login, provide demo credentials above and explain how to access all features here.

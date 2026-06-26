@@ -1,0 +1,14 @@
+# =============================================================================
+# Gemfile — Ruby dependencies for Fastlane
+# =============================================================================
+# Install with: bundle install
+# Run Fastlane with: bundle exec fastlane <lane>
+# =============================================================================
+
+source "https://rubygems.org"
+
+gem "fastlane", "~> 2.225"
+gem "cocoapods", "~> 1.15"  # Uncomment if your project uses CocoaPods
+
+# Pin Ruby version for consistency (optional)
+# ruby "3.2.0"

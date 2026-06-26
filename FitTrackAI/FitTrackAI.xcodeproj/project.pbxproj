@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		852581EC2FB773C500672DE7 /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = 852581EB2FB773C500672DE7 /* SuperwallKit */; };
+		A10000010000000000000001 /* FitTrackAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000001 /* FitTrackAIApp.swift */; };
+		A10000010000000000000002 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000002 /* AppTheme.swift */; };
+		A10000010000000000000003 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000003 /* Models.swift */; };
+		A10000010000000000000005 /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000005 /* AppDataStore.swift */; };
+		A10000010000000000000006 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000006 /* MainTabView.swift */; };
+		A10000010000000000000007 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000007 /* ProgressView.swift */; };
+		A10000010000000000000009 /* AnalyticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000009 /* AnalyticsView.swift */; };
+		A1000001000000000000000A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000A /* Assets.xcassets */; };
+		A1000001000000000000000B /* BodyFatNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000B /* BodyFatNormalizer.swift */; };
+		A1000001000000000000000C /* ScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000C /* ScreenLayout.swift */; };
+		A1000001000000000000000D /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000D /* OpenAIService.swift */; };
+		A1000001000000000000000E /* OpenAIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000E /* OpenAIConfig.swift */; };
+		A1000001000000000000000F /* LLMConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000001000000000000000F /* LLMConfig.swift */; };
+		A10000010000000000000010 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000010 /* KeychainHelper.swift */; };
+		A10000010000000000000011 /* APIKeySettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000010000000000000011 /* APIKeySettingsView.swift */; };
+		B10000010000000000000001 /* OnboardingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000001 /* OnboardingModels.swift */; };
+		B10000010000000000000002 /* OnboardingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000002 /* OnboardingStore.swift */; };
+		B10000010000000000000003 /* OnboardingTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000003 /* OnboardingTheme.swift */; };
+		B10000010000000000000004 /* OnboardingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000004 /* OnboardingComponents.swift */; };
+		B10000010000000000000005 /* GoalSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000005 /* GoalSelectionView.swift */; };
+		B10000010000000000000006 /* GoalTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000006 /* GoalTimelineView.swift */; };
+		B10000010000000000000007 /* WorkoutFrequencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000007 /* WorkoutFrequencyView.swift */; };
+		B10000010000000000000008 /* BodyScanUploadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000008 /* BodyScanUploadView.swift */; };
+		B10000010000000000000009 /* LockedResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000009 /* LockedResultsView.swift */; };
+		B10000010000000000000010 /* SubscriptionPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000010 /* SubscriptionPaywallView.swift */; };
+		B10000010000000000000011 /* OnboardingFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000011 /* OnboardingFlowView.swift */; };
+		B10000010000000000000012 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000012 /* RootView.swift */; };
+		B10000010000000000000013 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000013 /* AppConfig.swift */; };
+		B10000010000000000000014 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000014 /* SubscriptionManager.swift */; };
+		B10000010000000000000015 /* BackendAnalysisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000015 /* BackendAnalysisService.swift */; };
+		B10000010000000000000016 /* SuperwallPaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000016 /* SuperwallPaywallView.swift */; };
+		B10000010000000000000017 /* AppPaywallGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20000010000000000000017 /* AppPaywallGateView.swift */; };
+		C10000010000000000000001 /* NutritionCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000010000000000000001 /* NutritionCalculator.swift */; };
+		C10000010000000000000002 /* UserGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20000010000000000000002 /* UserGoals.swift */; };
+		D10000010000000000000001 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000010000000000000001 /* AccountView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		851EE7DF2FBB5F990010269B /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		A20000010000000000000001 /* FitTrackAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitTrackAIApp.swift; sourceTree = "<group>"; };
+		A20000010000000000000002 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		A20000010000000000000003 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		A20000010000000000000005 /* AppDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStore.swift; sourceTree = "<group>"; };
+		A20000010000000000000006 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		A20000010000000000000007 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		A20000010000000000000009 /* AnalyticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsView.swift; sourceTree = "<group>"; };
+		A2000001000000000000000A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000001000000000000000B /* BodyFatNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyFatNormalizer.swift; sourceTree = "<group>"; };
+		A2000001000000000000000C /* ScreenLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLayout.swift; sourceTree = "<group>"; };
+		A2000001000000000000000D /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		A2000001000000000000000E /* OpenAIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIConfig.swift; sourceTree = "<group>"; };
+		A2000001000000000000000F /* LLMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LLMConfig.swift; sourceTree = "<group>"; };
+		A20000010000000000000010 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
+		A20000010000000000000011 /* APIKeySettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeySettingsView.swift; sourceTree = "<group>"; };
+		A30000010000000000000001 /* FitTrackAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitTrackAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B20000010000000000000001 /* OnboardingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModels.swift; sourceTree = "<group>"; };
+		B20000010000000000000002 /* OnboardingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStore.swift; sourceTree = "<group>"; };
+		B20000010000000000000003 /* OnboardingTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTheme.swift; sourceTree = "<group>"; };
+		B20000010000000000000004 /* OnboardingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingComponents.swift; sourceTree = "<group>"; };
+		B20000010000000000000005 /* GoalSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionView.swift; sourceTree = "<group>"; };
+		B20000010000000000000006 /* GoalTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimelineView.swift; sourceTree = "<group>"; };
+		B20000010000000000000007 /* WorkoutFrequencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutFrequencyView.swift; sourceTree = "<group>"; };
+		B20000010000000000000008 /* BodyScanUploadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyScanUploadView.swift; sourceTree = "<group>"; };
+		B20000010000000000000009 /* LockedResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedResultsView.swift; sourceTree = "<group>"; };
+		B20000010000000000000010 /* SubscriptionPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionPaywallView.swift; sourceTree = "<group>"; };
+		B20000010000000000000011 /* OnboardingFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlowView.swift; sourceTree = "<group>"; };
+		B20000010000000000000012 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B20000010000000000000013 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		B20000010000000000000014 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		B20000010000000000000015 /* BackendAnalysisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendAnalysisService.swift; sourceTree = "<group>"; };
+		B20000010000000000000016 /* SuperwallPaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperwallPaywallView.swift; sourceTree = "<group>"; };
+		B20000010000000000000017 /* AppPaywallGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPaywallGateView.swift; sourceTree = "<group>"; };
+		C20000010000000000000001 /* NutritionCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionCalculator.swift; sourceTree = "<group>"; };
+		C20000010000000000000002 /* UserGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoals.swift; sourceTree = "<group>"; };
+		D20000010000000000000001 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A40000010000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				852581EC2FB773C500672DE7 /* SuperwallKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50000010000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A50000010000000000000002 /* FitTrackAI */,
+				A50000010000000000000003 /* Products */,
+				851EE7DF2FBB5F990010269B /* Secrets.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		A50000010000000000000002 /* FitTrackAI */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000001 /* FitTrackAIApp.swift */,
+				A50000010000000000000004 /* Theme */,
+				A50000010000000000000005 /* Models */,
+				A50000010000000000000006 /* Services */,
+				A50000010000000000000007 /* Views */,
+				A2000001000000000000000A /* Assets.xcassets */,
+			);
+			path = FitTrackAI;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A30000010000000000000001 /* FitTrackAI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000004 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000002 /* AppTheme.swift */,
+				A2000001000000000000000C /* ScreenLayout.swift */,
+				B20000010000000000000003 /* OnboardingTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000003 /* Models.swift */,
+				B20000010000000000000001 /* OnboardingModels.swift */,
+				C20000010000000000000002 /* UserGoals.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000006 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000005 /* AppDataStore.swift */,
+				A2000001000000000000000B /* BodyFatNormalizer.swift */,
+				A2000001000000000000000D /* OpenAIService.swift */,
+				A2000001000000000000000E /* OpenAIConfig.swift */,
+				A2000001000000000000000F /* LLMConfig.swift */,
+				A20000010000000000000010 /* KeychainHelper.swift */,
+				B20000010000000000000002 /* OnboardingStore.swift */,
+				B20000010000000000000013 /* AppConfig.swift */,
+				B20000010000000000000014 /* SubscriptionManager.swift */,
+				B20000010000000000000015 /* BackendAnalysisService.swift */,
+				C20000010000000000000001 /* NutritionCalculator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000007 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000012 /* RootView.swift */,
+				B20000010000000000000017 /* AppPaywallGateView.swift */,
+				A20000010000000000000006 /* MainTabView.swift */,
+				B50000010000000000000001 /* Onboarding */,
+				A50000010000000000000008 /* Progress */,
+				A5000001000000000000000A /* Analytics */,
+				D50000010000000000000001 /* Account */,
+				A5000001000000000000000B /* Settings */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A50000010000000000000008 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000007 /* ProgressView.swift */,
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000000A /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000009 /* AnalyticsView.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		A5000001000000000000000B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A20000010000000000000011 /* APIKeySettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B50000010000000000000001 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000011 /* OnboardingFlowView.swift */,
+				B50000010000000000000002 /* Components */,
+				B50000010000000000000003 /* Screens */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B50000010000000000000002 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000004 /* OnboardingComponents.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B50000010000000000000003 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B20000010000000000000005 /* GoalSelectionView.swift */,
+				B20000010000000000000006 /* GoalTimelineView.swift */,
+				B20000010000000000000007 /* WorkoutFrequencyView.swift */,
+				B20000010000000000000008 /* BodyScanUploadView.swift */,
+				B20000010000000000000009 /* LockedResultsView.swift */,
+				B20000010000000000000010 /* SubscriptionPaywallView.swift */,
+				B20000010000000000000016 /* SuperwallPaywallView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D50000010000000000000001 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				D20000010000000000000001 /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A60000010000000000000001 /* FitTrackAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A80000010000000000000003 /* Build configuration list for PBXNativeTarget "FitTrackAI" */;
+			buildPhases = (
+				A70000010000000000000001 /* Sources */,
+				A40000010000000000000001 /* Frameworks */,
+				A70000010000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FitTrackAI;
+			productName = FitTrackAI;
+			productReference = A30000010000000000000001 /* FitTrackAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A90000010000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A60000010000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = A80000010000000000000001 /* Build configuration list for PBXProject "FitTrackAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A50000010000000000000001;
+			packageReferences = (
+				852581EA2FB773C500672DE7 /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
+			);
+			productRefGroup = A50000010000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A60000010000000000000001 /* FitTrackAI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A70000010000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000001000000000000000A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70000010000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000010000000000000001 /* FitTrackAIApp.swift in Sources */,
+				A10000010000000000000002 /* AppTheme.swift in Sources */,
+				A1000001000000000000000C /* ScreenLayout.swift in Sources */,
+				A10000010000000000000003 /* Models.swift in Sources */,
+				A10000010000000000000005 /* AppDataStore.swift in Sources */,
+				A1000001000000000000000B /* BodyFatNormalizer.swift in Sources */,
+				A1000001000000000000000D /* OpenAIService.swift in Sources */,
+				A1000001000000000000000E /* OpenAIConfig.swift in Sources */,
+				A1000001000000000000000F /* LLMConfig.swift in Sources */,
+				A10000010000000000000010 /* KeychainHelper.swift in Sources */,
+				A10000010000000000000011 /* APIKeySettingsView.swift in Sources */,
+				A10000010000000000000006 /* MainTabView.swift in Sources */,
+				A10000010000000000000007 /* ProgressView.swift in Sources */,
+				A10000010000000000000009 /* AnalyticsView.swift in Sources */,
+				B10000010000000000000001 /* OnboardingModels.swift in Sources */,
+				B10000010000000000000002 /* OnboardingStore.swift in Sources */,
+				B10000010000000000000003 /* OnboardingTheme.swift in Sources */,
+				B10000010000000000000004 /* OnboardingComponents.swift in Sources */,
+				B10000010000000000000005 /* GoalSelectionView.swift in Sources */,
+				B10000010000000000000006 /* GoalTimelineView.swift in Sources */,
+				C10000010000000000000001 /* NutritionCalculator.swift in Sources */,
+				C10000010000000000000002 /* UserGoals.swift in Sources */,
+				D10000010000000000000001 /* AccountView.swift in Sources */,
+				B10000010000000000000007 /* WorkoutFrequencyView.swift in Sources */,
+				B10000010000000000000008 /* BodyScanUploadView.swift in Sources */,
+				B10000010000000000000009 /* LockedResultsView.swift in Sources */,
+				B10000010000000000000010 /* SubscriptionPaywallView.swift in Sources */,
+				B10000010000000000000011 /* OnboardingFlowView.swift in Sources */,
+				B10000010000000000000012 /* RootView.swift in Sources */,
+				B10000010000000000000013 /* AppConfig.swift in Sources */,
+				B10000010000000000000014 /* SubscriptionManager.swift in Sources */,
+				B10000010000000000000015 /* BackendAnalysisService.swift in Sources */,
+				B10000010000000000000016 /* SuperwallPaywallView.swift in Sources */,
+				B10000010000000000000017 /* AppPaywallGateView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AB0000010000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851EE7DF2FBB5F990010269B /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AB0000010000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851EE7DF2FBB5F990010269B /* Secrets.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB0000010000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851EE7DF2FBB5F990010269B /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 464GLVZXAN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BYPASS_PAYWALL = "$(BYPASS_PAYWALL)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fit Track AI";
+				INFOPLIST_KEY_FITTRACK_API_SECRET = "$(FITTRACK_API_SECRET)";
+				INFOPLIST_KEY_FITTRACK_API_URL = "$(FITTRACK_API_URL)";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take progress photos for body fat analysis.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select progress photos for body fat analysis.";
+				INFOPLIST_KEY_SUPERWALL_API_KEY = "$(SUPERWALL_API_KEY)";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.fittrackai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB0000010000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 851EE7DF2FBB5F990010269B /* Secrets.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 464GLVZXAN;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BYPASS_PAYWALL = "$(BYPASS_PAYWALL)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fit Track AI";
+				INFOPLIST_KEY_FITTRACK_API_SECRET = "$(FITTRACK_API_SECRET)";
+				INFOPLIST_KEY_FITTRACK_API_URL = "$(FITTRACK_API_URL)";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take progress photos for body fat analysis.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Select progress photos for body fat analysis.";
+				INFOPLIST_KEY_SUPERWALL_API_KEY = "$(SUPERWALL_API_KEY)";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.fittrackai;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A80000010000000000000001 /* Build configuration list for PBXProject "FitTrackAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000010000000000000001 /* Debug */,
+				AB0000010000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A80000010000000000000003 /* Build configuration list for PBXNativeTarget "FitTrackAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB0000010000000000000003 /* Debug */,
+				AB0000010000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		852581EA2FB773C500672DE7 /* XCRemoteSwiftPackageReference "Superwall-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/superwall/Superwall-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.15.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		852581EB2FB773C500672DE7 /* SuperwallKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 852581EA2FB773C500672DE7 /* XCRemoteSwiftPackageReference "Superwall-iOS" */;
+			productName = SuperwallKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = A90000010000000000000001 /* Project object */;
+}

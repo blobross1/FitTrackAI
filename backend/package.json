@@ -1,0 +1,5 @@
+{
+  "name": "fittrack-api",
+  "private": true,
+  "type": "module"
+}

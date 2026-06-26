@@ -1,0 +1,86 @@
+{
+  // =============================================================================
+  // VS Code / Cursor Tasks — iOS Deployment
+  // =============================================================================
+  // Run tasks via: Cmd+Shift+P → "Tasks: Run Task"
+  // Or bind to keyboard shortcuts in keybindings.json
+  // =============================================================================
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Fastlane: Beta (TestFlight)",
+      "type": "shell",
+      "command": "bundle exec fastlane beta",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "focus": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fastlane: Produce (Register App)",
+      "type": "shell",
+      "command": "bundle exec fastlane produce",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fastlane: Deliver (Submit for Review)",
+      "type": "shell",
+      "command": "bundle exec fastlane deliver",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fastlane: Upload Metadata Only",
+      "type": "shell",
+      "command": "bundle exec fastlane metadata",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Fastlane: Snapshot (Screenshots)",
+      "type": "shell",
+      "command": "bundle exec fastlane snapshot",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Bundle Install (Fastlane deps)",
+      "type": "shell",
+      "command": "bundle install",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Xcode: Build for Simulator",
+      "type": "shell",
+      "command": "xcodebuild -scheme FitTrackAI -destination 'platform=iOS Simulator,name=iPhone 16 Pro' build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

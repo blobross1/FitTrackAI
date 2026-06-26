@@ -1,0 +1,196 @@
+# =============================================================================
+# Fastfile — iOS Deployment Kit
+# =============================================================================
+# Customized for: FitTrackAI (com.demo.fittrackai)
+#
+# Lanes:
+#   produce  — Register the app on App Store Connect
+#   beta     — Build and upload to TestFlight
+#   deliver  — Upload metadata and submit for App Store review
+#   snapshot — Capture screenshots for the App Store
+#
+# Run with: bundle exec fastlane <lane>
+# =============================================================================
+
+default_platform(:ios)
+
+platform :ios do
+
+  # ---------------------------------------------------------------------------
+  # Shared configuration
+  # ---------------------------------------------------------------------------
+  # These values are also in Appfile; kept here for lane-level overrides.
+
+  APP_NAME     = "FitTrackAI"
+  BUNDLE_ID    = "com.demo.fittrackai"
+  SCHEME       = "FitTrackAI"
+
+  # Set to the .xcworkspace name if you use CocoaPods/SPM workspace builds
+  USE_WORKSPACE = false
+  WORKSPACE     = ""
+  XCODEPROJ     = "FitTrackAI.xcodeproj"
+
+  # ---------------------------------------------------------------------------
+  # Helper: load App Store Connect API key from .env or environment
+  # ---------------------------------------------------------------------------
+  # Using an API key is more secure than Apple ID password + 2FA.
+  # Create one at: App Store Connect → Users & Access → Integrations → Keys
+  def load_api_key
+  if ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"]
+    app_store_connect_api_key(
+      key_id: ENV["APP_STORE_CONNECT_API_KEY_KEY_ID"],
+      issuer_id: ENV["APP_STORE_CONNECT_API_KEY_ISSUER_ID"],
+      key_filepath: ENV["APP_STORE_CONNECT_API_KEY_KEY_FILEPATH"],
+      duration: 1200,
+      in_house: false
+    )
+  end
+  end
+
+  # ---------------------------------------------------------------------------
+  # Helper: common build options
+  # ---------------------------------------------------------------------------
+  def xcode_build_options
+    opts = {
+      scheme: SCHEME,
+      export_method: "app-store",
+      # Automatic signing — Xcode manages certificates/profiles
+      # Change to false and set provisioning profile if using manual signing
+      xcargs: "-allowProvisioningUpdates"
+    }
+
+    if USE_WORKSPACE
+      opts[:workspace] = WORKSPACE
+    else
+      opts[:project] = XCODEPROJ
+    end
+
+    opts
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lane: produce — Register app on App Store Connect
+  # ---------------------------------------------------------------------------
+  # Creates the app record so you can upload builds and metadata.
+  # Run once per app. Safe to re-run (will skip if app already exists).
+  desc "Register FitTrackAI on App Store Connect"
+  lane :produce do
+    load_api_key
+
+    produce(
+      app_name: APP_NAME,
+      app_identifier: BUNDLE_ID,
+      sku: BUNDLE_ID.gsub(".", "_"),  # SKU must be unique in your account
+      language: "en-US",
+      app_version: "1.0",
+      skip_itc: false,
+      skip_devcenter: false
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lane: beta — Build and upload to TestFlight
+  # ---------------------------------------------------------------------------
+  # Builds a release IPA and uploads it to TestFlight for beta testing.
+  # Internal testers get access immediately; external testers need Beta Review.
+  desc "Build and upload FitTrackAI to TestFlight"
+  lane :beta do
+    load_api_key
+
+    # Increment build number automatically (uses latest TestFlight build + 1)
+    increment_build_number(
+      xcodeproj: XCODEPROJ
+    )
+
+    # Build the app
+    build_app(xcode_build_options)
+
+    # Upload to TestFlight
+    upload_to_testflight(
+      skip_waiting_for_build_processing: true,
+      # distribute_external: false,  # Set true to submit for external beta review
+      notify_external_testers: false,
+      changelog: "Beta build uploaded via Fastlane"
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lane: deliver — Upload metadata and submit for App Store review
+  # ---------------------------------------------------------------------------
+  # Uploads screenshots, description, keywords, etc. from fastlane/metadata/
+  # and submits the latest build for App Store review.
+  desc "Upload metadata and submit FitTrackAI for App Store review"
+  lane :deliver do
+    load_api_key
+
+    deliver(
+      app_identifier: BUNDLE_ID,
+      metadata_path: "./fastlane/metadata",
+      screenshots_path: "./fastlane/screenshots",
+      submit_for_review: true,
+      automatic_release: false,       # Set true to auto-release after approval
+      force: true,                    # Skip HTML preview confirmation
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      }
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lane: snapshot — Capture App Store screenshots
+  # ---------------------------------------------------------------------------
+  # Uses UI tests to capture screenshots on multiple device sizes.
+  # Requires a UI test target. See README for setup instructions.
+  desc "Capture App Store screenshots for FitTrackAI"
+  lane :snapshot do
+    capture_screenshots(
+      scheme: SCHEME,
+      workspace: USE_WORKSPACE ? WORKSPACE : nil,
+      project: USE_WORKSPACE ? nil : XCODEPROJ,
+      devices: [
+        "iPhone 16 Pro Max",
+        "iPhone 16 Pro",
+        "iPhone SE (3rd generation)",
+        "iPad Pro 13-inch (M4)"
+      ],
+      languages: ["en-US"],
+      output_directory: "./fastlane/screenshots",
+      clear_previous_screenshots: true,
+      override_status_bar: true
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # Lane: metadata — Upload metadata only (no binary, no submission)
+  # ---------------------------------------------------------------------------
+  desc "Upload App Store metadata without submitting for review"
+  lane :metadata do
+    load_api_key
+
+    deliver(
+      app_identifier: BUNDLE_ID,
+      metadata_path: "./fastlane/metadata",
+      screenshots_path: "./fastlane/screenshots",
+      submit_for_review: false,
+      skip_binary_upload: true,
+      force: true
+    )
+  end
+
+  # ---------------------------------------------------------------------------
+  # before_all — runs before every lane
+  # ---------------------------------------------------------------------------
+  before_all do
+    # Load secrets from .env file if present (never commit .env!)
+    env_file = File.join(Dir.pwd, ".env")
+    if File.exist?(env_file)
+      File.readlines(env_file).each do |line|
+        next if line.strip.empty? || line.start_with?("#")
+        key, value = line.strip.split("=", 2)
+        ENV[key] = value if key && value
+      end
+    end
+  end
+
+end

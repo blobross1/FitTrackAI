@@ -1,0 +1,31 @@
+# =============================================================================
+# Snapfile — Screenshot capture configuration
+# =============================================================================
+# Used by the `snapshot` Fastlane lane. Customize devices and languages here.
+# Docs: https://docs.fastlane.tools/actions/capture_screenshots/
+# =============================================================================
+
+# Devices to capture (must match simulators installed on your Mac)
+devices([
+  "iPhone 16 Pro Max",
+  "iPhone 16 Pro",
+  "iPhone SE (3rd generation)",
+  "iPad Pro 13-inch (M4)"
+])
+
+# Languages / locales
+languages([
+  "en-US"
+])
+
+# Output directory (relative to project root)
+output_directory("./fastlane/screenshots")
+
+# Clear old screenshots before capturing new ones
+clear_previous_screenshots(true)
+
+# Hide status bar time/battery for cleaner screenshots
+override_status_bar(true)
+
+# Launch arguments passed to UI tests (useful for demo mode / seed data)
+# launch_arguments(["-UITesting", "-SkipOnboarding"])

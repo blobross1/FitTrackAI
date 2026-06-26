@@ -1,0 +1,20 @@
+# =============================================================================
+# Appfile — Apple Developer account configuration
+# =============================================================================
+# This file tells Fastlane which Apple Developer account to use.
+# Update these values with your real credentials after running init-deployment.sh
+#
+# Docs: https://docs.fastlane.tools/advanced/#appfile
+# =============================================================================
+
+# Your Apple ID (the email you use for developer.apple.com)
+apple_id("rosswright1@hotmail.co.uk")
+
+# Team ID — find at https://developer.apple.com/account → Membership
+team_id("464GLVZXAN ")
+
+# App Store Connect Team ID (usually same as team_id for individual accounts)
+itc_team_id("464GLVZXAN ")
+
+# Bundle identifier for this app
+app_identifier("com.demo.fittrackai")
